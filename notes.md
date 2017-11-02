@@ -36,3 +36,16 @@ currentPlayer = null; // Game Over
 
 In the above example, you have the variable `currentPlayer` set to `Charlie` while he is playing.
 When that player dies, you specifically set the variable `currentPlayer` to `null` to show that he does not exist anymore.
+
+## Built-In JavaScript Methods
+
+1. Alert
+2. Prompt
+3. console.log
+4. `clear()`: You can clear your console by typing `clear()` and hitting enter.
+
+## Prompt
+
+To store the data gathered from using a prompt, put it in a variable:
+
+`var userName = prompt( "What is your name?" );`
