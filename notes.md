@@ -17,3 +17,22 @@
 - camelCase (this is what you should use for variables in JavaScript)
 - snake_case
 - kebob-case (or dash-case)
+
+## Undefined
+
+A variable that has been declared but not defined. (No value has been assigned to it.)
+
+`var name;`
+`var age;`
+
+## Null
+
+"Explicitly nothing."
+
+```
+var currentPlayer = "Charlie";
+currentPlayer = null; // Game Over
+```
+
+In the above example, you have the variable `currentPlayer` set to `Charlie` while he is playing.
+When that player dies, you specifically set the variable `currentPlayer` to `null` to show that he does not exist anymore.
