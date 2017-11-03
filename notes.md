@@ -49,3 +49,30 @@ When that player dies, you specifically set the variable `currentPlayer` to `nul
 To store the data gathered from using a prompt, put it in a variable:
 
 `var userName = prompt( "What is your name?" );`
+
+## Type Coercion
+
+BEST PRACTICE: It is safest to always use `===` (strict equals) to avoid confusion due to type coercion.
+
+EXAMPLES:
+
+```
+var x = 99;
+x == "99" // true
+x === "99" // false
+```
+
+```
+var y = null;
+y == undefined // true
+y === undefined // false
+```
+
+### Cases where `==` does NOT behave the way you'd expect
+
+`true == "1" // true`
+`0 == false // true`
+`null == undefined // true`
+`NaN == NaN // false`
+
+Again, due to quirks like these, it is best to use `===` by default instead of `==`.
