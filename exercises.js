@@ -22,14 +22,14 @@
 
 // Boolean Exercise 1
 
-var x = 10;
+/*var x = 10;
 var y = "a";
 
-(y === "b" || x >= 10) // true, because of x.
+(y === "b" || x >= 10)*/ // true, because of x.
 
 // Boolean Exercise 2
 
-var x = 3;
+/*var x = 3;
 var y = 8;
 
 !( x == "3" || x === "y" ) && !( y != 8 && x <= y );
@@ -40,11 +40,11 @@ Process:
 2. !( true || false ) && !( false && true );
 3. !( true ) && !( false );
 4. false && true;
-5. false;
+5. false;*/
 
 // Boolean Exercise 3
 
-var str = "";
+/*var str = "";
 var msg = "haha!";
 var isFunny = "false";
 
@@ -55,4 +55,26 @@ Process:
 1. !( ( false || true ) && true );
 2. !( true && true );
 3. !true;
-4. false;
+4. false;*/
+
+// Boolean Exercise 4
+
+/*If age is negative, print error message.
+If age is 21, print "Happy 21st birthday!"
+If age is odd, print "Your age is odd."
+Super bonus: If age is a perfect square, print "Perfect square!"*/
+var age = prompt( "What is your age?" );
+console.log( "Your age is " + age + ".");
+
+if ( age < 0 ) {
+	console.log( "Error." );
+}
+else if ( age == 21 ) {
+	console.log( "Happy 21st birthday!!");
+}
+else if ( (!(age % 2) == 0) ) {
+	console.log( "Your age is odd." );
+}
+else if ( age/age == 1 ) {
+	console.log( "Perfect square!" );
+}

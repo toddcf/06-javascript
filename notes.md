@@ -138,7 +138,7 @@ if ( age < 18 ) {
 	enter = false;
 	drink = false;
 }
-else if ( (age = <18) && (age < 21) ) {
+else if ( age < 21 ) { */ Because it's else if, you don't need to specify the age being greater than or equal to 18 -- that's already included because of the preceding if statement. /*
 	enter = true;
 	drink = false;
 }
