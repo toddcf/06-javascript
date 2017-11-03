@@ -76,3 +76,7 @@ y === undefined // false
 `NaN == NaN // false`
 
 Again, due to quirks like these, it is best to use `===` by default instead of `==`.
+
+## Short Circuiting
+
+If the first side of an `or` statement is true, JavaScript skips checking the second side because it would be a moot point -- the `or` statement is now true regardless of whether the second side is true or false. This is called short circuiting.
