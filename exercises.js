@@ -63,18 +63,22 @@ Process:
 If age is 21, print "Happy 21st birthday!"
 If age is odd, print "Your age is odd."
 Super bonus: If age is a perfect square, print "Perfect square!"*/
-var age = prompt( "What is your age?" );
+var age = Number( prompt( "What is your age?" ) );
 console.log( "Your age is " + age + ".");
 
 if ( age < 0 ) {
 	console.log( "Error." );
 }
-else if ( age == 21 ) {
+else if ( age === 21 ) {
 	console.log( "Happy 21st birthday!!");
 }
-else if ( (!(age % 2) == 0) ) {
+else if ( (age % 2) !== 0) {
 	console.log( "Your age is odd." );
 }
-else if ( age/age == 1 ) {
+// else if ( age/age === 1 ) {
+// 	console.log( "Perfect square!" );
+// }
+// Or:
+else if ( age % Math.sqrt( age ) === 0 ) {
 	console.log( "Perfect square!" );
 }
