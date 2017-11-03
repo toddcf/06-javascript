@@ -20,14 +20,14 @@
 // var days = age * 365;
 // alert( "You have been alive for approximately " + days + " days!" );
 
-// Operators Exercise 1
+// Boolean Exercise 1
 
 var x = 10;
 var y = "a";
 
 (y === "b" || x >= 10) // true, because of x.
 
-// Operators Exercise 2
+// Boolean Exercise 2
 
 var x = 3;
 var y = 8;
@@ -41,3 +41,18 @@ Process:
 3. !( true ) && !( false );
 4. false && true;
 5. false;
+
+// Boolean Exercise 3
+
+var str = "";
+var msg = "haha!";
+var isFunny = "false";
+
+!(( str || msg ) && isFunny);
+
+Process:
+
+1. !( ( false || true ) && true );
+2. !( true && true );
+3. !true;
+4. false;
