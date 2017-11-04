@@ -63,7 +63,7 @@ Process:
 If age is 21, print "Happy 21st birthday!"
 If age is odd, print "Your age is odd."
 Super bonus: If age is a perfect square, print "Perfect square!"*/
-var age = Number( prompt( "What is your age?" ) );
+/*var age = Number( prompt( "What is your age?" ) );
 console.log( "Your age is " + age + ".");
 
 if ( age < 0 ) {
@@ -74,11 +74,77 @@ else if ( age === 21 ) {
 }
 else if ( (age % 2) !== 0) {
 	console.log( "Your age is odd." );
-}
+}*/
 // else if ( age/age === 1 ) {
 // 	console.log( "Perfect square!" );
 // }
 // Or:
-else if ( age % Math.sqrt( age ) === 0 ) {
+/*else if ( age % Math.sqrt( age ) === 0 ) {
 	console.log( "Perfect square!" );
+}*/
+
+// While Loop Exercise 1
+
+/*var num = 1;
+
+while ( num <= 10 ) {
+	console.log( num );
+	num += 2;
+}*/
+
+// Should print:
+/* 1, 3, 5, 7, 9 */
+
+// Print all numbers between -10 and 19.
+/*var numA = -10;
+
+while ( numA < 20 ) {
+	console.log( "numA = " + numA );
+	numA++;
+}*/
+
+
+// Print all even numbers between 10 and 40.
+/*var numB = 10;
+
+while ( numB <=40 ) {
+	console.log( "numB = " + numB );
+	numB += 2;
+}*/
+
+
+// Print all odd numbers between 300 and 333.
+/*var numC = 300;
+
+while ( numC <= 333 ) {
+	console.log( "numC = " + ( numC + 1 ) );
+	numC += 2;
+}*/
+
+
+// Print all numbers divisible by 5 AND 3 between 5 and 50.
+/*var numD = 5;
+
+while ( numD <= 50 ) {
+	if ( ( numD % 5 === 0 ) && ( numD % 3 === 0 ) ) {
+		console.log( "numD = " + numD );
+	}
+	numD++;
+}*/
+
+// Annoy-O-Matic
+
+var yeah = "yeah";
+var yes = "yes";
+var active = true;
+
+while ( active ) {
+	
+	var answer = prompt( "Are we there yet?" );
+	
+	if ( answer === yeah || answer === yes ) {
+		alert( "Yay, we finally made it!");
+		active = false;
+	}
+
 }
