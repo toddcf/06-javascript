@@ -134,17 +134,23 @@ while ( numD <= 50 ) {
 
 // Annoy-O-Matic
 
-var yeah = "yeah";
-var yes = "yes";
-var active = true;
+/*var answer = prompt( "Are we there yet?" );
 
-while ( active ) {
-	
-	var answer = prompt( "Are we there yet?" );
-	
-	if ( answer === yeah || answer === yes ) {
-		alert( "Yay, we finally made it!");
-		active = false;
-	}
+while ( answer !== "yes" && answer !== "yeah" ) {
 
+	answer = prompt( "Are we there yet?" );
+	
 }
+
+alert( "Yay, we finally made it!");*/
+
+// Version 2, allowing "yes" to be anywhere in the answer string:
+var answer = prompt( "Are we there yet?" );
+
+while ( answer.indexOf( "yes" === -1 ) ) {
+
+	answer = prompt( "Are we there yet?" );
+	
+}
+
+alert( "Yay, we finally made it!");
