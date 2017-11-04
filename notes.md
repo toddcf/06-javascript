@@ -149,3 +149,35 @@ else {
 
 ## Loops
 
+### While Loops
+
+Runs code as long as a specified condition is true.
+
+```
+// Print all numbers divisible by 5 AND 3 between 5 and 50.
+
+var numD = 5;
+
+while ( numD <= 50 ) {
+	if ( ( numD % 5 === 0 ) && ( numD % 3 === 0 ) ) {
+		console.log( "numD = " + numD );
+	}
+	numD++;
+}
+```
+
+### For Loops
+
+Runs code a set number of times.
+
+for( init; condition; step ) {
+	// Code to be run.
+}
+
+```
+var str = "hello";
+
+for( var i = 0; i < str.length; i++ ) {
+	console.log( str[i] );
+}
+```
