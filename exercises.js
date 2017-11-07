@@ -1,4 +1,4 @@
-/*console.log( 100 % 3 );*/ /* 100/3 = 33, remainder 1 */
+console.log( 100 % 3 );*/ /* 100/3 = 33, remainder 1 */
 
 /*("blah" + "blah") [6]*/ /* the first letter is 0, so 6 = a */
 
@@ -181,3 +181,74 @@ alert( "Yay, we finally made it!");*/
 		console.log( i );
 	}
 }*/
+
+// FUNCTIONS
+
+function isEven( num1 ) {
+	if ( num1 % 2 === 0 ) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+isEven(4); /*true*/
+isEven(21); /*false*/
+isEven(68); /*true*/
+isEven(333); /*false*/
+
+// Shorter Alternative:
+function isEven( num2 ) {
+	return num2 % 2 === 0;
+}
+// This works because returning that equation will either result in true or false!
+
+// Factorial
+// V1: Counting UP, which is the more concise solution:
+function factorialUp ( num3 ) {
+
+	// Define a result variable
+	var result = 1;
+
+	// Unnecessary to start i at 1, as it will simply multiply 1 * 1.
+	for ( var i = 2; i <= num3; i++ ) {
+		result *= i; /* This is a shorter way of writing result = result * i; */
+	}
+
+	return result;
+
+}
+
+// V2: Counting DOWN:
+function factorialDown ( num4 ) {
+
+	// Define a result variable
+	var result = num4;
+
+	if ( num4 === 0 ) {
+		return 1;
+	}
+	
+	for ( var i = num4 - 1; i >= 1; i-- ) {
+		result *= i; /* This is a shorter way of writing result = result * i; */
+	}
+
+	return result;
+
+}
+
+factorialUp(5); /*120*/
+factorialUp(2); /*2*/
+factorialUp(10); /*3628800*/
+factorialUp(0); /*1*/
+
+function kebabToSnake( str ) {
+	/*var snake = str.replace( "-", "_" );*/
+	var snake = str.replace( /-/g, "_" );
+	return snake;
+}
+
+kebabToSnake( "hello-world" ); /*hello_world*/
+kebabToSnake( "dogs-are-awesome" ); /*dogs_are_awesome*/
+kebabToSnake( "blah" ); /*blah
