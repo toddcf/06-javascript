@@ -1,10 +1,10 @@
-console.log( 100 % 3 );*/ /* 100/3 = 33, remainder 1 */
+// console.log( 100 % 3 );*/ /* 100/3 = 33, remainder 1 */
 
-/*("blah" + "blah") [6]*/ /* the first letter is 0, so 6 = a */
+// /*("blah" + "blah") [6]*/ /* the first letter is 0, so 6 = a */
 
-/*console.log( "hello".length % "hi\\".length );*/ /* 5 % 3 = 2 */
+// /*console.log( "hello".length % "hi\\".length );*/ /* 5 % 3 = 2 */
 
-// JS Stalker Exercise
+// // JS Stalker Exercise
 
 // var firstName = prompt( "What is your first name?" );
 // console.log(firstName);
@@ -85,12 +85,14 @@ else if ( (age % 2) !== 0) {
 
 // While Loop Exercise 1
 
-/*var num = 1;
+// Print all odd numbers between 1 and 10.
 
-while ( num <= 10 ) {
-	console.log( num );
-	num += 2;
-}*/
+// var num = 1;
+
+// while ( num <= 10 ) {
+// 	console.log( num );
+// 	num += 2;
+// }
 
 // Should print:
 /* 1, 3, 5, 7, 9 */
@@ -172,7 +174,6 @@ alert( "Yay, we finally made it!");*/
 	if ( i % 2 !== 0 ) {
 		console.log( i );
 	}
-
 }*/
 
 // Print all numbers divisible by 5 AND 3 between 5 and 50.
@@ -182,73 +183,44 @@ alert( "Yay, we finally made it!");*/
 	}
 }*/
 
-// FUNCTIONS
+// MOVIE DATABASE
 
-function isEven( num1 ) {
-	if ( num1 % 2 === 0 ) {
-		return true;
+// Movie array. Each movie object in the array has: Title (string), rating (number), and hasWatched (boolean).
+// Loop through the array and print out "You have/have not watched TITLE - rating."
+
+var movies = [
+	{
+		title: "Heat",
+		rating: 5,
+		watched: true
+	},
+	{
+		title: "Solaris",
+		rating: 4,
+		watched: true
+	},
+	{
+		title: "Blade Runner - The Final Cut",
+		rating: 5,
+		watched: true
+	},
+	{
+		title: "Blade Runner 2049",
+		rating: 3,
+		watched: false
+	}
+]
+
+movies.forEach( function( film ) {
+	if ( film.watched ) {
+		console.log( "You have watched \"" + film.title + "\" - " + film.rating + " stars." );
 	}
 	else {
-		return false;
+		console.log( "You have not seen \"" + film.title + "\" - " + film.rating + " stars." );
 	}
-}
+});
 
-isEven(4); /*true*/
-isEven(21); /*false*/
-isEven(68); /*true*/
-isEven(333); /*false*/
 
-// Shorter Alternative:
-function isEven( num2 ) {
-	return num2 % 2 === 0;
-}
-// This works because returning that equation will either result in true or false!
 
-// Factorial
-// V1: Counting UP, which is the more concise solution:
-function factorialUp ( num3 ) {
 
-	// Define a result variable
-	var result = 1;
 
-	// Unnecessary to start i at 1, as it will simply multiply 1 * 1.
-	for ( var i = 2; i <= num3; i++ ) {
-		result *= i; /* This is a shorter way of writing result = result * i; */
-	}
-
-	return result;
-
-}
-
-// V2: Counting DOWN:
-function factorialDown ( num4 ) {
-
-	// Define a result variable
-	var result = num4;
-
-	if ( num4 === 0 ) {
-		return 1;
-	}
-	
-	for ( var i = num4 - 1; i >= 1; i-- ) {
-		result *= i; /* This is a shorter way of writing result = result * i; */
-	}
-
-	return result;
-
-}
-
-factorialUp(5); /*120*/
-factorialUp(2); /*2*/
-factorialUp(10); /*3628800*/
-factorialUp(0); /*1*/
-
-function kebabToSnake( str ) {
-	/*var snake = str.replace( "-", "_" );*/
-	var snake = str.replace( /-/g, "_" );
-	return snake;
-}
-
-kebabToSnake( "hello-world" ); /*hello_world*/
-kebabToSnake( "dogs-are-awesome" ); /*dogs_are_awesome*/
-kebabToSnake( "blah" ); /*blah
